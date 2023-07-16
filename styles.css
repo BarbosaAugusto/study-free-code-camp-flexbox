@@ -1,0 +1,43 @@
+* {/*7.normalize o modelo de caixa usando o seletor * que é o seletor universal(seleciona todos os elementos HTML) e a propriedade box-sizing definida como border-box diz que o elemento considera a borda como seu tamanho*/
+    box-sizing: border-box;
+  }
+  
+  body {/*9.Elimine as bordas do body, aplique uma fonte e uma cor de fundo*/
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+  }
+  
+  .header {/*10.Estilize o cabeçalho*/
+    text-align: center;/*Alinhando texto no cento*/
+    text-transform: uppercase;/*Alinhando texto no cento*/
+    padding: 32px;/*Definindo um espaçamento interno*/
+    background-color: #0a0a23;
+    color: #FFF;
+    border-bottom: 4px solid #FDB347
+  }
+  
+  .gallery {/*11.O flexbox é um layout unidimensional que controla como os itens são espaçados e alinhados dentro de um contêiner*/
+    display: flex;/*Isso fará um elemento contêiner flex todos os filhos de um contêiner flex são itens flex*/
+      flex-direction: row;/*12.O flexbox tem o eixo principal e eixo cruzado. O eixo principal é chamado de flex-direction, que tem 4 valores, row, row-reverse, collumn e collumn-reverse*/
+      flex-wrap: wrap;/*13.A propriedade flex-wrap determina como os itens se comportam, wrap fará os itens irem para a próxima linha se o contêiner flex for muito pequeno, nowrap que é o padrão mantém todos na mesmalinha*/
+      justify-content: center;/*Determina como os itens dentro do contêiner flex são posicionados no eixo principal*/
+      align-items: center;/*15.Posiciona o conteúdo flex ao longo do eito transversal. Como fo flex-direction foi definido como row o eixo cruzado é vertical*/
+      padding: 20px 10px;/*Dá um espaço nas laterais e em cima e baixo*/
+    max-width: 1400px;/*Define um tamanho máximo*/
+    margin: 0 auto;/*Centraliza*/
+      gap: 16px;/*18.Para criar um espaço entre as imagens deve usar o gap. Tem propriedades row-gap e column-gap*/
+  }
+  
+  .gallery img {/*8.Definindo o tamanho das imagens*/
+    width: 100%;
+    max-width: 350px;
+      height: 300px;
+      object-fit: cover;/*17.As imagens ficaram distorcidas ocorreu porque tem tamanhos diferentes*/
+      border-radius: 10px;/*19.Suavize as bordar das imagens*/
+  }
+  
+  .gallery::after {/*20.O pseudo-elemento after cria o último elemento filho do elemento selecionado*/
+    content: "";/*conteúdo*/
+    width: 350px;
+  }
